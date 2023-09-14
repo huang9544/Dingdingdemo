@@ -1,0 +1,9 @@
+POST https://api.dingtalk.com/v1.0/oauth2/accessToken HTTP/1.1
+Content-Type: application/json
+
+{
+  "appKey": "dingernwb3iryphogobb",
+  "appSecret": "K9jjmYY7MpMpC-zGlme_i2FjPv_0ZDcmS6_KQZeQIozUwZkIyq1v3vSN-senKbSw"
+}
+
+###
