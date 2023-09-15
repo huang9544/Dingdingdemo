@@ -26,7 +26,7 @@ services:
           command:
             - java
           args:
-            - '-Dserver.port=9000'
+            - '-Dserver.port=8080'
             - '-jar'
             - target/demo-0.0.1-SNAPSHOT.jar
       triggers:
@@ -41,3 +41,7 @@ services:
               - DELETE
               - HEAD
               - PATCH
+server:
+  port: 8080
+  servlet:
+    context-path: /DingdingTest
