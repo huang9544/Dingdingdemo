@@ -28,7 +28,7 @@ services:
           args:
             - '-Dserver.port=9000'
             - '-jar'
-            - target/demo-0.0.1-SNAPSHOT.jar
+            - target/Dingdingdemo-1.0-SNAPSHOT.jar
       triggers:
         - name: httpTrigger
           type: http
