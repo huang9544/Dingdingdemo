@@ -1,9 +1,18 @@
-POST http://127.0.0.1:8080/DingdingTest/testController
+POST http://localhost:8080/DingdingTest/testController
 Content-Type: application/json
 
 {
   "test": "1",
   "test2": 2
+}
+
+###
+POST http://dingdinemo-atgi-serverllication-ttkrsxcneu.cn-hangzhou.fcapp.run/testControlNoHandler
+Content-Type: application/json
+
+{
+  "test": "1123",
+  "test2": 232
 }
 
 ###

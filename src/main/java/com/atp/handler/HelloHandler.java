@@ -3,6 +3,10 @@ package com.atp.handler;
 
 import com.aliyun.fc.runtime.Context;
 import com.aliyun.fc.runtime.HttpRequestHandler;
+import com.atp.services.TestServices;
+import com.atp.services.impl.TestServicesImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
@@ -17,7 +21,11 @@ import java.util.Enumeration;
 /**
  * 阿里云FC（function computer）
  */
+@Repository
 public class HelloHandler implements HttpRequestHandler {
+
+
+    private TestServices testServices;
 
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response, Context context) throws IOException, ServletException {
@@ -42,7 +50,8 @@ public class HelloHandler implements HttpRequestHandler {
             sb.append(line);
         }
         System.out.println(sb);
-
+        String testStr = testServices.testService(sb.toString());
+        System.out.println(testStr);
 
         response.setStatus(200);
         response.setHeader("header1", "value1");
